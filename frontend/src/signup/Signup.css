@@ -1,0 +1,205 @@
+/* =====================================================
+   PAGE WRAPPER — mirrors .login-page / .list-page
+   ===================================================== */
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background: #f7f8fb;
+}
+
+/* =====================================================
+   CARD
+   ===================================================== */
+.signup-card {
+  width: 100%;
+  max-width: 440px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+.signup-header h1 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* =====================================================
+   FORM
+   ===================================================== */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.signup-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  padding: 11px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus,
+.signup-form input[type="password"]:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.signup-form input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   CHECKBOX ROW (reused pattern from Login)
+   ===================================================== */
+.checkbox {
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: 8px !important;
+  font-weight: 400;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1.4;
+}
+.checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: #667eea;
+  cursor: pointer;
+}
+.checkbox a {
+  color: #667eea;
+  text-decoration: none;
+}
+.checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   PASSWORD STRENGTH METER
+   ===================================================== */
+.strength {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: -6px;
+}
+
+.strength-bar {
+  flex: 1;
+  height: 6px;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.strength-bar .fill {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  transition:
+    width 0.25s,
+    background 0.25s;
+}
+
+/* Widths + colors by level */
+.strength-bar .fill[data-level="1"] {
+  width: 25%;
+  background: #e74c3c;
+}
+.strength-bar .fill[data-level="2"] {
+  width: 50%;
+  background: #f39c12;
+}
+.strength-bar .fill[data-level="3"] {
+  width: 75%;
+  background: #3498db;
+}
+.strength-bar .fill[data-level="4"] {
+  width: 100%;
+  background: #2ecc71;
+}
+
+.strength-label {
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 60px;
+  text-align: right;
+}
+.strength-label.weak {
+  color: #e74c3c;
+}
+.strength-label.fair {
+  color: #f39c12;
+}
+.strength-label.good {
+  color: #3498db;
+}
+.strength-label.strong {
+  color: #2ecc71;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.signup-footer {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+.signup-footer a {
+  color: #667eea;
+  font-weight: 500;
+  text-decoration: none;
+}
+.signup-footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+  .signup-header h1 {
+    font-size: 22px;
+  }
+}

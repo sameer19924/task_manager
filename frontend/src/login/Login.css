@@ -1,0 +1,203 @@
+/* =====================================================
+   PAGE WRAPPER — matches .list-page padding & centering
+   ===================================================== */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background: #f7f8fb; /* same bg as List */
+}
+
+/* =====================================================
+   CARD — same feel as .task-form / .modal
+   ===================================================== */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+.login-header h1 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.muted {
+  color: #777;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =====================================================
+   FORM FIELDS — matches .task-form input styles
+   ===================================================== */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  padding: 11px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.login-form input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   REMEMBER / FORGOT ROW
+   ===================================================== */
+.login-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px !important;
+  font-weight: 400;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+}
+.checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #667eea;
+  cursor: pointer;
+}
+
+.forgot {
+  color: #667eea;
+  font-weight: 500;
+  font-size: 13px;
+  text-decoration: none;
+}
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   BUTTON — reuses .btn-primary, adds block modifier
+   ===================================================== */
+.btn-primary {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+.btn-primary:hover {
+  background: #556cd6;
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* =====================================================
+   ERROR — matches .error in List.css
+   ===================================================== */
+.error {
+  background: #fee;
+  color: #c33;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  border: 1px solid #fcc;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.login-footer {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+.login-footer a {
+  color: #667eea;
+  font-weight: 500;
+  text-decoration: none;
+}
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+  .login-header h1 {
+    font-size: 22px;
+  }
+  .login-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,557 @@
+/* =====================================================
+   PAGE WRAPPER
+   ===================================================== */
+.list-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.list-header h1 {
+  margin: 0 0 4px;
+  font-size: 26px;
+}
+
+.muted {
+  color: #777;
+  font-size: 13px;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.btn-primary {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+.btn-primary:hover {
+  background: #556cd6;
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-ghost:hover {
+  background: #f0f0f5;
+}
+
+.btn-users {
+  background: #f5f7ff;
+  border: 1px solid #c7d2fe;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4338ca;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-users:hover {
+  background: #e0e7ff;
+  border-color: #a5b4fc;
+}
+
+/* =====================================================
+   ADD-TASK FORM
+   ===================================================== */
+.task-form {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.task-form label,
+.modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.task-form input,
+.task-form select,
+.task-form textarea,
+.modal input,
+.modal select,
+.modal textarea {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.task-form input:focus,
+.task-form select:focus,
+.task-form textarea:focus,
+.modal input:focus,
+.modal select:focus,
+.modal textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.task-form textarea,
+.modal textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Grids used by the form + modal */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+/* =====================================================
+   FILTERS
+   ===================================================== */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.tab:hover {
+  background: #f0f0f5;
+}
+.tab.active {
+  background: #667eea;
+  color: #fff;
+  font-weight: 600;
+}
+
+.tab .count {
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 1px 8px;
+  font-size: 12px;
+}
+.tab.active .count {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.filter-right {
+  display: flex;
+  gap: 8px;
+}
+.filter-right select,
+.search {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+.filter-right select:focus,
+.search:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+/* =====================================================
+   TASK LIST
+   ===================================================== */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-left: 4px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  transition:
+    box-shadow 0.2s,
+    transform 0.1s;
+}
+.task-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.task-card.status-todo {
+  border-left-color: #f0a500;
+}
+.task-card.status-in-progress {
+  border-left-color: #667eea;
+}
+.task-card.status-done {
+  border-left-color: #2ecc71;
+  opacity: 0.85;
+}
+.task-card.status-done h3 {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+.task-title-row h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.task-desc {
+  margin: 4px 0 8px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.task-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+}
+.meta {
+  color: #666;
+}
+.meta.overdue {
+  color: #d33;
+  font-weight: 600;
+}
+
+/* =====================================================
+   BADGES
+   ===================================================== */
+.badge {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  display: inline-block;
+}
+
+.badge.priority-low {
+  background: #e6f7ee;
+  color: #1a8f4a;
+}
+.badge.priority-medium {
+  background: #fff4e0;
+  color: #b87a00;
+}
+.badge.priority-high {
+  background: #ffe5e5;
+  color: #c0392b;
+}
+
+.badge.status-todo {
+  background: #fff4e0;
+  color: #b87a00;
+}
+.badge.status-in-progress {
+  background: #e6ebff;
+  color: #3a4dbf;
+}
+.badge.status-done {
+  background: #e6f7ee;
+  color: #1a8f4a;
+}
+
+/* =====================================================
+   ROW ACTIONS (edit / delete)
+   ===================================================== */
+.task-actions {
+  display: flex;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.btn-icon:hover {
+  background: #f0f0f5;
+}
+.btn-icon.danger:hover {
+  background: #ffe5e5;
+  color: #c0392b;
+}
+
+/* =====================================================
+   ERROR MESSAGE
+   ===================================================== */
+.error {
+  background: #fee;
+  color: #c33;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  border: 1px solid #fcc;
+  margin-bottom: 16px;
+}
+
+/* =====================================================
+   EDIT MODAL
+   ===================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.2s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Lock body scroll while modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 640px) {
+  .list-page {
+    padding: 20px 14px 40px;
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .header-actions {
+    justify-content: space-between;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filter-right {
+    flex-direction: column;
+  }
+  .filter-right select,
+  .search {
+    width: 100%;
+  }
+
+  .task-card {
+    flex-direction: column;
+  }
+  .task-actions {
+    align-self: flex-end;
+  }
+}
+/* =====================================================
+   PAGINATION
+   ===================================================== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.page-info {
+  font-size: 14px;
+  color: #555;
+}
+.page-info strong {
+  color: #1a1a1a;
+}
+
+.limit-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+}
+.limit-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.pagination .btn-ghost:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: transparent;
+}
